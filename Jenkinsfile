@@ -16,5 +16,10 @@ pipeline {
                 bat 'gradlew.bat clean build'
             }
         }
+	    stage('RUN') {
+            steps {
+                bat 'gradlew.bat run'
+            }
+        }
 }
 }
