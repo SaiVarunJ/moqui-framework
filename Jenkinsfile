@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('GET_COMPONENT') {
             steps {
-                bat 'gradlew.bat getComponent'
+                bat 'gradlew.bat getComponent -P component=PopCommerce'
             }
         }
 	      stage('LOAD'){
@@ -11,7 +11,7 @@ pipeline {
 			          bat 'gradlew.bat load'
             }
 	      }
-        stage('Three') {
+        stage('BUILD') {
             steps {
                 bat 'gradlew.bat clean build'
             }
