@@ -95,7 +95,7 @@ public class MoquiStart {
             System.out.println("    conf=<moqui.conf> ----------- The Moqui Conf XML file to use, overrides other ways of specifying it");
             System.out.println("    If no -types or -location argument is used all known data files of all types will be loaded.");
             System.out.println("[default] ---- Run embedded Jetty server");
-            System.out.println("    port=<port> ---------------- The http listening port. Default is 8080");
+            System.out.println("    port=<port> ---------------- The http listening port. Default is 8383");
             System.out.println("    threads=<max threads> ------ Maximum number of threads. Default is 100");
             System.out.println("    conf=<moqui.conf> ---------- The Moqui Conf XML file to use, overrides other ways of specifying it");
             System.out.println("");
@@ -159,7 +159,7 @@ public class MoquiStart {
         String runtimePath = System.getProperty("moqui.runtime");
 
         try {
-            int port = 8080;
+            int port = 8383;
             String portStr = argMap.get("port");
             if (portStr != null && portStr.length() > 0) port = Integer.parseInt(portStr);
             int threads = 100;
