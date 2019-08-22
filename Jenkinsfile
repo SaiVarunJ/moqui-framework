@@ -11,7 +11,7 @@ pipeline {
 			          bat 'gradlew.bat load'
             }
 	      }
-        stage('Three') {
+        stage('CLEAN BUILD') {
             steps {
                 bat 'gradlew.bat clean build'
             }
