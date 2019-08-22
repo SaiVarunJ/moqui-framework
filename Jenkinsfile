@@ -19,6 +19,7 @@ pipeline {
 	stage('DEPLOY') {
 		steps{
 			bat 'gradlew.bat deployTomcat'
+			bat 'gradlew.bat addRuntimeTomcat'
 		}
 	    }        
 }
