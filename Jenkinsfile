@@ -18,7 +18,7 @@ pipeline {
 	    }
 	stage('DEPLOY') {
 		steps{
-			bat 'deployTomcat'
+			bat 'gradlew.bat deployTomcat'
 		}
 	    }        
 }
