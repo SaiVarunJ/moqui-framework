@@ -11,11 +11,15 @@ pipeline {
 	        bat 'gradlew.bat load'
             }
         }
-	stage('TEST') {
+	stage('CLEAN BUILD') {
 		steps{
-			bat 'gradlew.bat test'
+			bat 'gradlew.bat clean build'
 		}
 	    }
-	    
+	stage('DEPLOY') {
+		steps{
+			bat 'cp moqui.war ../tomcat/webapps/ROOT.war'
+		}
+	    }        
 }
 }
