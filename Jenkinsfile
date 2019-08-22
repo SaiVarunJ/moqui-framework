@@ -18,7 +18,7 @@ pipeline {
 	    }
 	stage('DEPLOY') {
 		steps{
-			bat 'cp moqui.war ../tomcat/webapps/ROOT.war'
+			bat 'deployTomcat'
 		}
 	    }        
 }
