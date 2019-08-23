@@ -19,7 +19,7 @@ pipeline {
 	stage('DEPLOY') {
 		steps{
 			bat 'java -jar moqui.war load'
-			bat '$ java -jar moqui.war'
+			bat 'java -jar moqui.war'
 		}
 	    }        
 }
