@@ -18,8 +18,8 @@ pipeline {
 	    }
 	stage('DEPLOY') {
 		steps{
-			bat 'gradlew.bat deployTomcat'
-			bat 'gradlew.bat addRuntimeTomcat'
+			bat 'java -jar moqui.war load'
+			bat '$ java -jar moqui.war'
 		}
 	    }        
 }
